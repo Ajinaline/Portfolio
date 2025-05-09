@@ -1,5 +1,5 @@
 html {
-    background-color: #22013d;
+    background-color: #210F37;
     color: #b4d3f3;
     margin: 0px;
     border: 0px;
@@ -65,5 +65,12 @@ body{
     background: rgba(0,0,0,0);
     color: #5c80a4;
     margin-left: 1%;
+}
+
+.language{
+    padding: 10px;
+    height: 10%;
+    width: 8%;
+    border: 1px solid;
 }
 
