@@ -74,10 +74,79 @@ body{
 }
 
 #language{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 25px;
-    margin-bottom: 15%;
+    margin-left: 25%;
+    max-width: 50%;
+    margin-bottom: 10%;
 }
 
+.first-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 30px;
+    margin-bottom: 4%;
+}
+
+.second-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.timeline{
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr 3px 1fr;
+}
+
+.timeline_component{
+    margin: 0 20px 20px 20px;
+}
+
+.timeline_component_bg{
+    padding: 1.5em;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.timeline_date_right{
+    text-align: right;
+}
+
+.timeline_middle{
+    position: relative;
+    background: white;
+}
+
+.timeline_point{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+}
+
+.timeline_point_bottom{
+    top: initial;
+    bottom: 0;
+}
+
+.timeline_title{
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.timeline_paragraph{
+    line-height: 1.5;
+}
