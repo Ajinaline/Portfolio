@@ -8,7 +8,7 @@ html {
 body{
     height: 100%;
     margin: 0;
-    font-family: "Roboto";
+    font-family: "Open Sans";
     font-size: 16px;
 }
 
@@ -150,4 +150,46 @@ body{
 
 .timeline_paragraph{
     line-height: 1.5;
+}
+
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.individual{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 24px;
+}
+
+.used{
+    display: flex;
+    align-items: end;
+    flex-direction: row;
+    margin-top: 12px;
+    font-size: 12px;
+    justify-self: flex-start;
+    width: 390px;
+    padding-left: 10px;
+}
+
+.used a{
+    margin: 8px;
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 50px;
+    padding: 4px 10px;
+    color: white;
+}
+
+.project-image{
+    border-radius: 10px;
+    width: 400px;
 }
