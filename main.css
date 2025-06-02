@@ -40,6 +40,17 @@ body{
     margin-bottom: 20%;
 }
 
+@keyframes transparentSlideDown {
+    0%{
+
+    }
+
+    100%{
+        
+    }
+    
+}
+
 .introduction-words{
     display: flex;
     flex-direction: column;
