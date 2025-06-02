@@ -153,9 +153,11 @@ body{
 }
 
 .projects{
-    display: flex;
+    display: grid;
     justify-content: center;
+    grid-template-columns: auto auto auto;
     align-items: center;
+    gap: 50px 100px;
 }
 
 .individual{
@@ -192,4 +194,25 @@ body{
 .project-image{
     border-radius: 10px;
     width: 400px;
+}
+
+.source-buttons{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.github-button{
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 6px;
+    margin-bottom: 20px;
+    background-color: #4b00b2;
+    color: white;
+    font-weight: bold;
+    border-width: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
 }
