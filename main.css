@@ -151,37 +151,26 @@ body{
     margin-left: 1%;
 }
 
-#language{
+.language{
     margin-left: 25%;
     max-width: 50%;
     margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 .language-box{
     width: 40px;
     padding: 10px;
     border-style: solid;
-    border-width: 1px;
-    border-color: white;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
+    margin: 10px;
+    background-color: rgba(105, 105, 105, 0.121);
+    backdrop-filter: blur(1.3px);
 }
 
-.first-row{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 30px;
-    margin-bottom: 4%;
-}
-
-.second-row{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    font-size: 30px;
-}
 
 .timeline{
     margin: 0 auto;
