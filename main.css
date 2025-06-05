@@ -212,8 +212,29 @@ body{
 .language a:nth-child(8) { animation-delay: .7s; }
 .language a:nth-child(9) { animation-delay: .8s; }
 
+@keyframes transparentSlideRight {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
-.timeline{
+@keyframes transparentSlideLeft {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.timeline {
     margin: 0 auto;
     margin-bottom: 10%;
     max-width: 750px;
@@ -223,41 +244,62 @@ body{
     grid-template-columns: 1fr 3px 1fr;
 }
 
-.timeline_component{
+.timeline_component {
     margin: 0 20px 20px 20px;
+    opacity: 0; /* Ensure components are hidden initially */
 }
 
-.timeline-img{
-   border-radius: 49%;
-   width: 100px; 
-   margin-left: 90px;
+.timeline-img {
+    border-radius: 49%;
+    width: 100px; 
+    margin-left: 90px;
 }
 
-.timeline_component_bg{
+.timeline_component_bg {
     padding: 1.5em;
-    background: rgba(255,255,255,0.2);
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     backdrop-filter: blur(1.3px);
     color: #b4d3f3;
-    animation-name: transparentSlideLeft;
-    animation-duration: 0.6s;
-    animation-timing-function: ease-out ;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
 }
 
-.timeline_date_right{
+.timeline_component_bg_left {
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(1.3px);
+    color: #b4d3f3;
+}
+
+.timeline_date_right {
     text-align: right;
     font-size: 23px;
 }
 
-.timeline_middle{
+.animate-left {
+    animation-name: transparentSlideLeft; /* Corrected */
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; /* Use 'forwards' to maintain end state */
+}
+
+.animate-right {
+    animation-name: transparentSlideRight; /* Corrected */
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; /* Use 'forwards' to maintain end state */
+}
+
+.timeline_middle {
     position: relative;
     background: white;
 }
 
-.timeline_point{
+.timeline_point {
     position: absolute;
     top: 0;
     left: 50%;
@@ -268,20 +310,21 @@ body{
     border-radius: 50%;
 }
 
-.timeline_point_bottom{
+.timeline_point_bottom {
     top: initial;
     bottom: 0;
 }
 
-.timeline_title{
+.timeline_title {
     margin: 0;
     font-size: 1.15em;
     font-weight: bold;
 }
 
-.timeline_paragraph{
+.timeline_paragraph {
     line-height: 1.5;
 }
+
 
 @keyframes typing {
     from{

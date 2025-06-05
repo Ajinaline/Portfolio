@@ -33,3 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(imgElement);
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const timelineComponents = document.querySelectorAll(
+    '.timeline_component_bg, .timeline_component_bg_left, .timeline_date_right, .timeline_date_left'
+  );
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        // Add animation classes based on element's class
+        if (el.classList.contains('timeline_component_bg') || el.classList.contains('timeline_date_left')) {
+          el.classList.add('animate-left');
+        } else if (el.classList.contains('timeline_component_bg_left') || el.classList.contains('timeline_date_right')) {
+          el.classList.add('animate-right');
+        }
+        // Stop observing after animation triggered
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1 });
+  timelineComponents.forEach(el => {
+    observer.observe(el);
+  });
+});
