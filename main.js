@@ -1,24 +1,19 @@
-/*function autoRefresh() {
-    window.location = window.location.href;
-}
-setInterval('autoRefresh()', 1000);*/
+document.addEventListener('DOMContentLoaded', () => {
+    const languageBoxes = document.querySelectorAll(".language a"); // Selects all <img> elements with this class
 
-//This is the code for the languages used
-/*const languages = ["HTML", "CSS", "JavaScript", "React.js", "React.ts", "Python", "Java", "Kotlin"];
+    languageBoxes.forEach(imgElement => { // Renamed 'button' to 'imgElement' for clarity
+        // Apply the initial transparent-slide class.
+        // The animation-delay will be picked up from the CSS :nth-child rules.
+        imgElement.classList.add('transparent-slide');
 
-var space = document.getElementById("language");
-
-for (let i = 0; i < languages.length; i++){
-    space.innerHTML += `<a> ${languages[i]} </a>`;
-}
-
-
-//This is the code for the frameworks used
-const frameworks = ["Github", "Postman", "Kali Linux", "VScode", "Android Studio", ""];
-
-var space = document.getElementById("framework");
-
-for (let i = 0; i < languages.length; i++){
-    space.innerHTML += `<a> ${languages[i]} </a>`;
-}
-    */
+        // Listen for the CORRECT animationend event on the image element
+        imgElement.addEventListener('animationend', (event) => {
+            if (event.animationName === 'transparentSlideDown') {
+                // Once transparentSlideDown finishes, remove its class
+                imgElement.classList.remove('transparent-slide');
+                // And then add the class to start the infinite worm animation
+                imgElement.classList.add('worm-active');
+            }
+        });
+    });
+});
