@@ -199,14 +199,14 @@ body{
     animation-direction: alternate;
 }
 
-.language a:nth-child(2) { animation-delay: .25s; }
-.language a:nth-child(3) { animation-delay: .5s; }
-.language a:nth-child(4) { animation-delay: .75s; }
-.language a:nth-child(5) { animation-delay: 1s; }
-.language a:nth-child(6) { animation-delay: 1.25s; }
-.language a:nth-child(7) { animation-delay: 1.50s; }
-.language a:nth-child(8) { animation-delay: 1.75s; }
-.language a:nth-child(9) { animation-delay: 2s; }
+.language a:nth-child(2) { animation-delay: .1s; }
+.language a:nth-child(3) { animation-delay: .2s; }
+.language a:nth-child(4) { animation-delay: .3s; }
+.language a:nth-child(5) { animation-delay: .4s; }
+.language a:nth-child(6) { animation-delay: .5s; }
+.language a:nth-child(7) { animation-delay: .6s; }
+.language a:nth-child(8) { animation-delay: .7s; }
+.language a:nth-child(9) { animation-delay: .8s; }
 
 
 .timeline{
