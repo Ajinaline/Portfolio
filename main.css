@@ -13,6 +13,7 @@ html {
         linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     z-index: 2;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -158,6 +159,8 @@ body{
     margin-bottom: 10%;
     display: flex;
     justify-content: center;
+    visibility: hidden;
+    will-change: transform, opacity;
 }
 
 
@@ -192,6 +195,7 @@ body{
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    visibility: visible;
 }
 
 .worm-active{
@@ -201,6 +205,7 @@ body{
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-direction: alternate;
+    visibility: visible;
 }
 
 .language a:nth-child(2) { animation-delay: .1s; }
@@ -246,7 +251,8 @@ body{
 
 .timeline_component {
     margin: 0 20px 20px 20px;
-    opacity: 0; /* Ensure components are hidden initially */
+    visibility: hidden;
+    will-change: transform, opacity;
 }
 
 .timeline-img {
@@ -283,6 +289,7 @@ body{
     animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
+    visibility: visible;
     animation-fill-mode: forwards; /* Use 'forwards' to maintain end state */
 }
 
@@ -291,6 +298,7 @@ body{
     animation-duration: 0.6s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
+    visibility: visible;
     animation-fill-mode: forwards; /* Use 'forwards' to maintain end state */
 }
 
@@ -350,6 +358,9 @@ body{
     width: 0ch;
     white-space: nowrap;
     border-right: 1px solid;
+}
+
+.typewriter-animate{
     animation: typing 1.2s steps(9) forwards,
         blink 1s step-end infinite;
 }

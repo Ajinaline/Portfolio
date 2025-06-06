@@ -57,3 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const typewriter = document.querySelector('.typewriter');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                typewriter.classList.add('typewriter-animate');
+                observer.unobserve(typewriter);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    if (typewriter) {
+        observer.observe(typewriter);
+    }
+});
+
+
