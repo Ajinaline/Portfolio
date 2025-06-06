@@ -247,18 +247,6 @@ body{
     text-align: center;
 }
 
-.github{
-    background: rgba(0,0,0,0);
-    color: #5c80a4;
-    margin-left: 90%;
-}
-
-.linkedin{
-    background: rgba(0,0,0,0);
-    color: #5c80a4;
-    margin-left: 1%;
-}
-
 section{
     margin-bottom: 20%;
 }
@@ -544,4 +532,31 @@ section{
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.contacts a{
+    font-size: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #b4d3f3;
+    margin: 30px;
+}
+
+.contacts li{
+    display: flex; 
+    align-items:center; 
+    gap: 25px
 }
